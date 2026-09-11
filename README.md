@@ -131,9 +131,11 @@ nslookup 你的图床域名
 ```
 quillite-imgbed-bridge/
 ├── main.go                        服务源码
-├── QuilliteImgBedBridge.exe       编译产物
-├── config.json                    你的配置（首次运行自动生成）
-├── bridge.log                     运行日志
+├── QuilliteImgBedBridge.exe       编译产物（已 gitignore，见「自行编译」）
+├── config.example.json            配置模板（复制为 config.json 后填写）
+├── config.json                    你的配置（首次运行自动生成，已 gitignore 不入库）
+├── bridge.log                     运行日志（已 gitignore）
+├── .gitignore                     忽略真实配置与二进制产物
 ├── 启动.bat                       前台启动（带日志窗口）
 ├── 静默启动.vbs                   后台无窗口启动
 ├── 安装开机自启.ps1 / 卸载开机自启.ps1
