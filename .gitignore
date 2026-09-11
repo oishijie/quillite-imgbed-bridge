@@ -1,0 +1,8 @@
+# 真实配置（含 apiToken 凭据，切勿入库）
+config.json
+
+# 运行日志
+bridge.log
+
+# 编译产物（可用 README 中的命令自行编译）
+QuilliteImgBedBridge.exe

@@ -1,0 +1,37 @@
+{
+  "_说明": "轻阅 Markdown 与 CloudFlare-ImgBed 之间的本地转接服务配置（示例模板）",
+  "_用法": "复制本文件为 config.json，填入你自己的 baseUrl 和 authCode 或 apiToken 即可。",
+
+  "listen": "127.0.0.1:36678",
+  "_listen": "本服务监听地址。必须是回环地址，否则轻阅会拒绝连接。端口别和 PicGo 的 36677 冲突。",
+
+  "baseUrl": "https://你的图床域名",
+  "_baseUrl": "【必填】你的 CloudFlare-ImgBed 站点根地址，例如 https://img.example.com，结尾不要带斜杠。",
+
+  "authCode": "",
+  "_authCode": "【必填】图床后台上传认证码。在 图床后台 → 系统设置 → 安全设置 里查看或设置。若没开启认证则留空。",
+
+  "apiToken": "",
+  "_apiToken": "可选替代方案：API Token（需 upload 权限），在 系统设置 → 安全设置 → API Token 管理 里生成。与 authCode 填一个即可。",
+
+  "uploadChannel": "",
+  "_uploadChannel": "可选。留空表示跟随 ImgBed 服务端默认渠道。可选值：telegram / cfr2 / s3 / discord / huggingface / webdav",
+
+  "channelName": "",
+  "_channelName": "可选。多渠道场景下指定具体渠道名，留空表示不指定。",
+
+  "uploadFolder": "",
+  "_uploadFolder": "可选。上传到子目录，例如 img/2026（留空则上传到根目录）。",
+
+  "uploadNameType": "",
+  "_uploadNameType": "可选。命名方式：default（前缀_原名）/ index（仅前缀）/ origin（仅原名）/ short（短链）。留空用服务端默认。",
+
+  "timeoutSeconds": 60,
+  "_timeoutSeconds": "单次上传转发的超时时间（秒）。",
+
+  "logFile": "bridge.log",
+  "_logFile": "日志文件，相对路径以本程序所在目录为基准。留空则不写文件。",
+
+  "verbose": false,
+  "_verbose": "设为 true 会把图床的原始响应体打进日志，排查问题时很有用。"
+}
